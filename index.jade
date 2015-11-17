@@ -1,0 +1,36 @@
+doctype
+html(lang='en', ng-app='ah')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+
+    title Автохаб. Статика.
+
+    meta(name='description', content='')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+
+    link(rel='stylesheet', href='assets/styles/vendor.css')
+    link(rel='stylesheet', href='assets/styles/app.css')
+
+  body
+
+    header
+      .side.side_left.side_left_padding header left
+      .side.side_right header right
+
+    .section
+      aside.side.side_left aside left
+      section.side.side_right section right
+
+    footer
+      .side.side_left.side_left_padding
+        span © Автохаб 2015
+      .side.side_right
+        a.link.footer__item(href='#') Правовое соглашение
+        a.link.footer__item(href='#') Техническая поддержка
+        span.footer__item.footer__item_last Сделано в 
+          a.link(href='') Студии Вадима Скротского
+    
+
+    script(src='assets/js/vendor.js')
+    script(src='assets/js/app.js')

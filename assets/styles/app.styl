@@ -1,0 +1,68 @@
+@import "fonts.styl"
+@import "mixins.styl"
+@import "icons.styl"
+
+*
+  box-sizing border-box
+
+a
+.link
+  &:link
+  &:visited
+    color #666
+
+a
+.link
+  &:hover
+    color #333
+
+html
+  background-color #f5f6f7
+  
+body
+  font 14px 'Roboto', 'Helvetica Neue', Helvetica, Arial
+  color #999
+  display flex
+  flex-direction column
+  min-height 100vh
+  max-width 1200px
+  margin 0 auto
+  
+header
+.section
+footer
+  display flex
+  
+.section
+  flex 1
+  
+footer
+  padding 20px 0
+
+.side
+  display flex
+  
+  &_left
+    flex-basis 220px
+    
+    &_padding
+      padding-left 20px
+    
+  &_right
+    padding 0 20px
+    flex 1
+    
+.link
+  text-decoration none
+  transition all .2s ease-in
+  
+.footer
+  
+  &__item
+    margin-right 20px
+    
+    &:last-child
+      margin-right 0
+      
+    &_last
+      margin-left auto
