@@ -2,29 +2,42 @@
 @import "mixins.styl"
 @import "icons.styl"
 
+baseColor = #999
+linkColor = #666
+hoverColor = #333
+
+@keyframes fadeInLeft
+  from
+    opacity 0
+    left 90%
+
+  to
+    opacity 1
+    left 100%
+
 *
   box-sizing border-box
 
 a
 .link
-  color #666
+  color linkColor
   cursor pointer
 
   &:link
   &:visited
-    color #666
+    color linkColor
 
 a
 .link
   &:hover
-    color #333
+    color hoverColor
 
 html
   background-color #f5f6f7
   
 body
   font 14px 'Roboto', 'Helvetica Neue', Helvetica, Arial
-  color #999
+  color baseColor
   display flex
   flex-direction column
   min-height 100vh
@@ -67,7 +80,7 @@ header
       margin-left 0
 
     &:active
-      box-shadow 0 0 1px 0 #666
+      box-shadow 0 0 1px 0 linkColor
       border 1px solid #cbcbcb
       
     & .icon
@@ -136,7 +149,7 @@ footer
       background #e8e9ea
       
     &:hover .filter__text
-      color #333
+      color hoverColor
       
     &:hover .filter__clear
       opacity .5
@@ -178,12 +191,12 @@ footer
     &:active
       background-color #c2c2c2
       
-.cars
+.cards
   display flex
   flex-wrap wrap
   margin 0 -10px
   
-.car
+.card
   position relative
   width 33.333%
   min-width 260px
@@ -227,6 +240,7 @@ footer
   &__info
     border-radius 0 0 3px 3px
     padding 10px
+    background #fff
     
   &__string
     overflow hidden
@@ -299,10 +313,10 @@ footer
     
     &_active
       border-color #e5e5e5
-      color #999
+      color baseColor
       
       &:hover
-        color #999
+        color baseColor
     
 .pagination
   clearfix()
@@ -336,7 +350,7 @@ footer
       
 @media (max-width 1020px)
 
-  .car
+  .card
     width 50%
     
 @media (max-width 865px)
@@ -344,6 +358,10 @@ footer
   .hide-2
   .footer__item_last
     display none
+    
+@media (min-width 800px)
+  aside.side_left
+    display flex !important
     
 @media (max-width 800px)
 
@@ -359,35 +377,21 @@ footer
     
     & .side_left
       flex-basis initial
-      margin-bottom 10px
+      margin-bottom 20px
 
-  aside
-    //display none !important
+  aside.side_left
+    display none
     
   .header__link_filter
     display inline-block
     
   .filter__param
-    height initial
-    line-height initial
-    display block
-    padding 0
     
     &:hover .popover
-      display block
-      animation none
-      left 0px
+      display none
 
   .filter__text
     max-width 85%
-    margin-right 20px
-    line-height 50px
-    padding 0 20px
-    
-  .filter__clear
-    position absolute
-    right 20px
-    top 16px
     
   .popover
     position relative
@@ -457,6 +461,10 @@ footer
 
     & .icon
       display block
+      
+  .section
+    & .side_left
+      margin-bottom 10px
 
   .side_left_padding
     padding-left 10px
@@ -464,10 +472,10 @@ footer
   .side_right
     padding 0 10px
 
-  .cars
+  .cards
     margin 0 -5px
 
-  .car
+  .card
     padding 0 5px 10px 5px
     
     &__inner:hover
@@ -481,6 +489,6 @@ footer
 
 @media (max-width 540px)
   
-  .car
+  .card
     width 100%
     
