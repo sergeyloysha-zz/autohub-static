@@ -102,7 +102,7 @@ gulp.task('views', function() {
 gulp.task('styles', function() {
 
   var opts = {
-    use: [autoprefixer('iOS >= 7', 'last 1 Chrome version')],
+    use: [autoprefixer({ browsers: ['last 2 versions'] })],
     //compress: true
   }
 
