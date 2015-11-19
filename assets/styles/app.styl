@@ -186,6 +186,7 @@ footer
 .car
   position relative
   width 33.333%
+  min-width 260px
   padding 0 10px 20px 10px
   
   &__inner
@@ -332,3 +333,81 @@ footer
       border-color #dcdcdc
       cursor default
       pointer-events none
+      
+@media (max-width 1020px)
+
+  .car
+    width 50%
+    
+@media (max-width 865px)
+
+  .hide-2
+  .footer__item_last
+    display none
+    
+@media (max-width 800px)
+
+  .header__text
+  .hide-3
+    display none
+    
+  aside
+    display none !important
+    
+  .header__link_filter
+    display inline-block
+    
+@media (max-width 680px)
+
+  header
+    margin 15px 0
+    height 20px
+    
+  .header__logo
+    background-image url('../images/logo_mob.svg')
+    width 93px
+    height 17px
+    
+  .header__nav
+    display flex
+    align-items center
+    margin-right 10px
+    
+  .header__link
+    background transparent
+    border none
+    padding 0
+    box-shadow none
+    margin-left 40px
+    
+    &:active
+      border none
+      box-shadow none
+    
+    & span
+      display none
+
+    & .icon
+      display block
+
+  .side_left_padding
+    padding-left 10px
+    
+  .side_right
+    padding 0 10px
+
+  .car
+    width 100%
+    padding 0 10px 10px 10px
+    
+    &__inner:hover
+      top 0px
+    
+  .pagination
+    margin 10px 0 0 0
+
+  .footer__item
+    display none
+    
+  
+    
