@@ -88,11 +88,12 @@ gulp.task('scripts', function () {
 gulp.task('views', function() {
 
   var opts = {
-    quotes: true
+    quotes: true,
+    pretty: true
   };
 
   gulp.src('*.jade')
-    .pipe(jade())
+    .pipe(jade(opts))
     .pipe(gulp.dest(buildDir));
 
 });

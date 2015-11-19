@@ -15,12 +15,177 @@ html(lang='en', ng-app='ah')
   body
 
     header
-      .side.side_left.side_left_padding header left
-      .side.side_right header right
+      .side.side_left.side_middle.side_left_padding
+        .header__logo
+      .side.side_right.side_middle
+        span 5658 предложений от проверенных продавцов в Минске
+        .header__nav
+          a.header__link(href='')
+            i.icon.icon_add
+            |Разместить предложение
+          a.header__link.header__link_filter(href='')
+            i.icon.icon_filter
+            |Фильтр
 
     .section
-      aside.side.side_left aside left
-      section.side.side_right section right
+      aside.side.side_left
+        .filter
+          .filter__param.filter__param_active
+            span.filter__text.filter__param-text Любая цена
+            span.filter__text.filter__param-selected Цена до 25000 $
+          .filter__param.filter__param_active
+            span.filter__text.filter__param-text Любая марка
+            span.filter__text.filter__param-selected Mercedes-Benz
+            a.icon.icon_clear.filter__clear
+          .filter__param
+            span.filter__text.filter__param-text Любая модель
+            span.filter__text.filter__param-selected s63 AMG
+            a.icon.icon_clear.filter__clear
+          .filter__param.filter__param_active
+            span.filter__text.filter__param-text Год выпуска
+            span.filter__text.filter__param-selected Не старше 2013 года
+          .filter__param.filter__param_active
+            span.filter__text.filter__param-text Тип двигателя
+            span.filter__text.filter__param-selected Бензин
+            a.icon.icon_clear.filter__clear
+          .filter__param.filter__param_active
+            span.filter__text.filter__param-text Любой объем
+            span.filter__text.filter__param-selected Объем не менее 2.5
+          .filter__param.filter__param_active
+            span.filter__text.filter__param-text Коробка передач
+            span.filter__text.filter__param-selected Автомат
+            a.icon.icon_clear.filter__clear
+          .filter__param.filter__param_active
+            span.filter__text.filter__param-text Любой пробег
+            span.filter__text.filter__param-selected Пробег до 50 000 км
+      section.side.side_right.side_column
+        .cars
+          .car
+            .car__inner
+              a.car__preview.link(href='')
+                img.car__thumb(src='assets/images/thumbs/img_1.png')
+                span.car__price 39 500 $
+              .car__info
+                .car__string
+                  a.link(href='') Mercedes CLS350
+                .car__string
+                  span.car__param 2013
+                  span.car__param 47 000 км
+                  span.car__param Бензин
+                  span.car__param 3.5
+                  span.car__param A
+          .car
+            .car__inner
+              a.car__preview.link(href='')
+                img.car__thumb(src='assets/images/thumbs/img_2.png')
+                span.car__price 9 450 $
+              .car__info
+                .car__string
+                  a.link(href='') Alfa Romeo MiTo
+                .car__string
+                  span.car__param 2010
+                  span.car__param 139 087 км
+                  span.car__param Бензин
+                  span.car__param 1.4
+                  span.car__param M
+          .car
+            .car__inner
+              a.car__preview.link(href='')
+                img.car__thumb(src='assets/images/thumbs/img_3.png')
+                span.car__price 16 000 $
+              .car__info
+                .car__string
+                  a.link(href='') Volkswagen Passat CC
+                .car__string
+                  span.car__param 2011
+                  span.car__param 53 000 км
+                  span.car__param Бензин
+                  span.car__param 2.0
+                  span.car__param A
+          .car
+            .car__inner
+              a.car__preview.link(href='')
+                img.car__thumb(src='assets/images/thumbs/img_4.png')
+                span.car__price 18 100 $
+              .car__info
+                .car__string
+                  a.link(href='') Volvo XC60
+                .car__string
+                  span.car__param 2010
+                  span.car__param 88 000 км
+                  span.car__param Бензин
+                  span.car__param 2.0
+                  span.car__param A
+          .car
+            .car__inner
+              a.car__preview.link(href='')
+                img.car__thumb(src='assets/images/thumbs/img_5.png')
+                span.car__price 16 300 $
+              .car__info
+                .car__string
+                  a.link(href='') Ford Fusion SE15
+                .car__string
+                  span.car__param 2013
+                  span.car__param 13 000 км
+                  span.car__param Бензин
+                  span.car__param 1.6
+                  span.car__param A
+          .car
+            .car__inner
+              a.car__preview.link(href='')
+                img.car__thumb(src='assets/images/thumbs/img_6.png')
+                span.car__price 32 900 $
+              .car__info
+                .car__string
+                  a.link(href='') Audi A8
+                .car__string
+                  span.car__param 2011
+                  span.car__param 89 000 км
+                  span.car__param Дизель
+                  span.car__param 4.0
+                  span.car__param A
+          .car
+            .car__inner
+              a.car__preview.link(href='')
+                img.car__thumb(src='assets/images/thumbs/img_7.png')
+                span.car__price 21 900 $
+              .car__info
+                .car__string
+                  a.link(href='') Mercedes GL500 4MATIC
+                .car__string
+                  span.car__param 2007
+                  span.car__param 125 000 км
+                  span.car__param Бензин
+                  span.car__param 5.5
+                  span.car__param A
+          .car
+            .car__inner
+              a.car__preview.link(href='')
+                img.car__thumb(src='assets/images/thumbs/img_8.png')
+                span.car__price 65 500 $
+              .car__info
+                .car__string
+                  a.link(href='') Porsche Macan S
+                .car__string
+                  span.car__param 2014
+                  span.car__param 9 700 км
+                  span.car__param Бензин
+                  span.car__param 3.0
+                  span.car__param A
+          .car
+            .car__inner
+              a.car__preview.link(href='')
+                img.car__thumb(src='assets/images/thumbs/img_9.png')
+                span.car__price 6 000 $
+              .car__info
+                .car__string
+                  a.link(href='') Fiat 500
+                .car__string
+                  span.car__param 2008
+                  span.car__param 86 280 км
+                  span.car__param Бензин
+                  span.car__param 1.2
+                  span.car__param M
 
     footer
       .side.side_left.side_left_padding
