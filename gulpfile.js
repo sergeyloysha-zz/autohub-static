@@ -101,11 +101,13 @@ gulp.task('views', function() {
 // Styles
 gulp.task('styles', function() {
 
+  var opts = {
+    use: [autoprefixer('iOS >= 7', 'last 1 Chrome version')],
+    //compress: true
+  }
+
   return gulp.src('assets/styles/app.styl')
-    .pipe(stylus({
-      use: [autoprefixer('iOS >= 7', 'last 1 Chrome version')],
-      compress: true
-    }))
+    .pipe(stylus(opts))
     .pipe(gulp.dest(buildDir + '/assets/styles/'));
 
 });

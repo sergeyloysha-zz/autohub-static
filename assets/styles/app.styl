@@ -7,6 +7,9 @@
 
 a
 .link
+  color #666
+  cursor pointer
+
   &:link
   &:visited
     color #666
@@ -64,8 +67,8 @@ header
       margin-left 0
 
     &:active
-      box-shadow 0 0 1px 0 #ffdb4d
-      border 1px solid #ffdb4d
+      box-shadow 0 0 1px 0 #666
+      border 1px solid #cbcbcb
       
     & .icon
       display none
@@ -117,6 +120,7 @@ footer
   width 100%
   
   &__param
+    position relative
     display flex
     align-items center
     height 50px
@@ -130,10 +134,17 @@ footer
       
     &:hover
       background #e8e9ea
+      
+    &:hover .filter__text
       color #333
       
     &:hover .filter__clear
       opacity .5
+      
+    &:hover .popover
+      display block
+      animation fadeInLeft .2s
+      left 100%
       
     &_active .filter__clear
       display inline-block
@@ -152,6 +163,7 @@ footer
     text-overflow ellipsis
     white-space nowrap
     max-width 160px
+    transition color .2s
       
   &__clear
     display none
@@ -222,3 +234,101 @@ footer
     
   &__param
     margin-right 10px
+    
+.popover
+  position absolute
+  display none
+  top -10px
+  left 90%
+  z-index 9999
+  background #fff
+  border-radius 3px
+  box-shadow 0 1px 5px rgba(0, 0, 0, 0.1)
+  
+  
+  &:after
+  &:before 
+    content ' '
+    display block
+    position absolute
+    top 29px
+    left -7px
+    background #fff
+    box-shadow 0 1px 5px rgba(0, 0, 0, 0.1)
+    width 14px
+    height 14px
+    
+  &:before
+    transform rotate(45deg)
+
+  &:after
+    box-shadow none
+    border none
+    top 21px
+    left 0px
+    width 20px
+    height 30px
+    
+  &__columns
+    padding 20px
+    column-fill: balance;
+    
+    &_2
+      column-count: 2;
+      column-gap: 0px;
+      
+    &_3
+      column-count: 3;
+      column-gap: 0px;
+    
+    &_4
+      column-count: 4;
+      column-gap: 0px;
+
+  &__item
+    display block
+    width 130px
+    line-height 30px
+    border 1px solid transparent
+    border-radius 3px
+    padding 0 10px
+    
+    &:active
+      border-color #e5e5e5
+    
+    &_active
+      border-color #e5e5e5
+      color #999
+      
+      &:hover
+        color #999
+    
+.pagination
+  clearfix()
+  margin 20px 0 0 0
+  padding 0
+  list-style none
+  
+  &_after
+    margin-top 20px
+    
+  &__item
+    clearfix()
+    float left
+    
+  &__link
+    display block
+    line-height 40px
+    border 1px solid transparent
+    padding 0 17px
+    border-radius 3px
+    cursor pointer
+    
+    &:active
+      border-color #dcdcdc
+
+    &_active
+      color #9d9d9d !important
+      border-color #dcdcdc
+      cursor default
+      pointer-events none

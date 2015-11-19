@@ -20,10 +20,10 @@ html(lang='en', ng-app='ah')
       .side.side_right.side_middle
         span 5658 предложений от проверенных продавцов в Минске
         .header__nav
-          a.header__link(href='')
+          a.header__link
             i.icon.icon_add
             |Разместить предложение
-          a.header__link.header__link_filter(href='')
+          a.header__link.header__link_filter
             i.icon.icon_filter
             |Фильтр
 
@@ -37,6 +37,48 @@ html(lang='en', ng-app='ah')
             span.filter__text.filter__param-text Любая марка
             span.filter__text.filter__param-selected Mercedes-Benz
             a.icon.icon_clear.filter__clear
+            .popover.filter__popover.fadeInLeft
+              .popover__columns.popover__columns_4
+                a.popover__item Acura
+                a.popover__item Alfa Romeo
+                a.popover__item Audi
+                a.popover__item BMW
+                a.popover__item Chevrolet
+                a.popover__item Chrysler
+                a.popover__item Citroen
+                a.popover__item Dacia
+                a.popover__item Daewoo
+                a.popover__item Dodge
+                a.popover__item Fiat
+                a.popover__item Ford
+                a.popover__item Great Wall
+                a.popover__item Honda
+                a.popover__item Hyundai
+                a.popover__item IVECO
+                a.popover__item Infiniti
+                a.popover__item Jeep
+                a.popover__item Kia
+                a.popover__item Lancia
+                a.popover__item Land Rover
+                a.popover__item Lexus
+                a.popover__item MINI
+                a.popover__item Mazda
+                a.popover__item.popover__item_active Mercedes-Benz
+                a.popover__item Mitsubishi
+                a.popover__item Nissan
+                a.popover__item Opel
+                a.popover__item Peugeot
+                a.popover__item Pontiac
+                a.popover__item Renault
+                a.popover__item Rover
+                a.popover__item SEAT
+                a.popover__item Saab
+                a.popover__item Skoda
+                a.popover__item Subaru
+                a.popover__item Suzuki
+                a.popover__item Toyota
+                a.popover__item Volkswagen
+                a.popover__item Volvo
           .filter__param
             span.filter__text.filter__param-text Любая модель
             span.filter__text.filter__param-selected s63 AMG
@@ -48,6 +90,14 @@ html(lang='en', ng-app='ah')
             span.filter__text.filter__param-text Тип двигателя
             span.filter__text.filter__param-selected Бензин
             a.icon.icon_clear.filter__clear
+            .popover.filter__popover
+              .popover__columns.popover__columns_2
+                a.popover__item.popover__item_active Бензин
+                a.popover__item Дизель
+                a.popover__item Газ (Бензин)
+                a.popover__item Гибрид (бензин)
+                a.popover__item Гибрид (дизель)
+                a.popover__item Электромобиль
           .filter__param.filter__param_active
             span.filter__text.filter__param-text Любой объем
             span.filter__text.filter__param-selected Объем не менее 2.5
@@ -55,6 +105,10 @@ html(lang='en', ng-app='ah')
             span.filter__text.filter__param-text Коробка передач
             span.filter__text.filter__param-selected Автомат
             a.icon.icon_clear.filter__clear
+            .popover.filter__popover
+              .popover__columns
+                a.popover__item.popover__item_active Автомат
+                a.popover__item Механика
           .filter__param.filter__param_active
             span.filter__text.filter__param-text Любой пробег
             span.filter__text.filter__param-selected Пробег до 50 000 км
@@ -62,12 +116,12 @@ html(lang='en', ng-app='ah')
         .cars
           .car
             .car__inner
-              a.car__preview.link(href='')
+              a.car__preview.link
                 img.car__thumb(src='assets/images/thumbs/img_1.png')
                 span.car__price 39 500 $
               .car__info
                 .car__string
-                  a.link(href='') Mercedes CLS350
+                  a.link Mercedes CLS350
                 .car__string
                   span.car__param 2013
                   span.car__param 47 000 км
@@ -76,12 +130,12 @@ html(lang='en', ng-app='ah')
                   span.car__param A
           .car
             .car__inner
-              a.car__preview.link(href='')
+              a.car__preview.link
                 img.car__thumb(src='assets/images/thumbs/img_2.png')
                 span.car__price 9 450 $
               .car__info
                 .car__string
-                  a.link(href='') Alfa Romeo MiTo
+                  a.link Alfa Romeo MiTo
                 .car__string
                   span.car__param 2010
                   span.car__param 139 087 км
@@ -90,12 +144,12 @@ html(lang='en', ng-app='ah')
                   span.car__param M
           .car
             .car__inner
-              a.car__preview.link(href='')
+              a.car__preview.link
                 img.car__thumb(src='assets/images/thumbs/img_3.png')
                 span.car__price 16 000 $
               .car__info
                 .car__string
-                  a.link(href='') Volkswagen Passat CC
+                  a.link Volkswagen Passat CC
                 .car__string
                   span.car__param 2011
                   span.car__param 53 000 км
@@ -104,12 +158,12 @@ html(lang='en', ng-app='ah')
                   span.car__param A
           .car
             .car__inner
-              a.car__preview.link(href='')
+              a.car__preview.link
                 img.car__thumb(src='assets/images/thumbs/img_4.png')
                 span.car__price 18 100 $
               .car__info
                 .car__string
-                  a.link(href='') Volvo XC60
+                  a.link Volvo XC60
                 .car__string
                   span.car__param 2010
                   span.car__param 88 000 км
@@ -118,12 +172,12 @@ html(lang='en', ng-app='ah')
                   span.car__param A
           .car
             .car__inner
-              a.car__preview.link(href='')
+              a.car__preview.link
                 img.car__thumb(src='assets/images/thumbs/img_5.png')
                 span.car__price 16 300 $
               .car__info
                 .car__string
-                  a.link(href='') Ford Fusion SE15
+                  a.link Ford Fusion SE15
                 .car__string
                   span.car__param 2013
                   span.car__param 13 000 км
@@ -132,12 +186,12 @@ html(lang='en', ng-app='ah')
                   span.car__param A
           .car
             .car__inner
-              a.car__preview.link(href='')
+              a.car__preview.link
                 img.car__thumb(src='assets/images/thumbs/img_6.png')
                 span.car__price 32 900 $
               .car__info
                 .car__string
-                  a.link(href='') Audi A8
+                  a.link Audi A8
                 .car__string
                   span.car__param 2011
                   span.car__param 89 000 км
@@ -146,12 +200,12 @@ html(lang='en', ng-app='ah')
                   span.car__param A
           .car
             .car__inner
-              a.car__preview.link(href='')
+              a.car__preview.link
                 img.car__thumb(src='assets/images/thumbs/img_7.png')
                 span.car__price 21 900 $
               .car__info
                 .car__string
-                  a.link(href='') Mercedes GL500 4MATIC
+                  a.link Mercedes GL500 4MATIC
                 .car__string
                   span.car__param 2007
                   span.car__param 125 000 км
@@ -160,12 +214,12 @@ html(lang='en', ng-app='ah')
                   span.car__param A
           .car
             .car__inner
-              a.car__preview.link(href='')
+              a.car__preview.link
                 img.car__thumb(src='assets/images/thumbs/img_8.png')
                 span.car__price 65 500 $
               .car__info
                 .car__string
-                  a.link(href='') Porsche Macan S
+                  a.link Porsche Macan S
                 .car__string
                   span.car__param 2014
                   span.car__param 9 700 км
@@ -174,18 +228,30 @@ html(lang='en', ng-app='ah')
                   span.car__param A
           .car
             .car__inner
-              a.car__preview.link(href='')
+              a.car__preview.link
                 img.car__thumb(src='assets/images/thumbs/img_9.png')
                 span.car__price 6 000 $
               .car__info
                 .car__string
-                  a.link(href='') Fiat 500
+                  a.link Fiat 500
                 .car__string
                   span.car__param 2008
                   span.car__param 86 280 км
                   span.car__param Бензин
                   span.car__param 1.2
                   span.car__param M
+
+        ul.pagination
+          li.pagination__item
+            a.link.pagination__link.pagination__link_active 1
+          li.pagination__item
+            a.link.pagination__link 2
+          li.pagination__item
+            a.link.pagination__link 3
+          li.pagination__item
+            a.link.pagination__link 4
+          li.pagination__item
+            a.link.pagination__link 5
 
     footer
       .side.side_left.side_left_padding
@@ -194,7 +260,7 @@ html(lang='en', ng-app='ah')
         a.link.footer__item(href='#') Правовое соглашение
         a.link.footer__item(href='#') Техническая поддержка
         span.footer__item.footer__item_last Сделано в 
-          a.link(href='') Студии Вадима Скротского
+          a.link Студии Вадима Скротского
     
 
     script(src='assets/js/vendor.js')
