@@ -32,7 +32,7 @@ var appFonts = [
 
 // Vendor Files
 var vendorScripts = [
-
+  'bower_components/jquery/dist/jquery.min.js'
 ];
 
 var vendorStyles = [
