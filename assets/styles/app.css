@@ -10,26 +10,6 @@
   font-weight: 700;
   src: local('Roboto'), local('Roboto-Bold'), url("../fonts/Roboto Bold.ttf") format('truetype');
 }
-@-webkit-keyframes fadeInLeft {
-  from {
-    opacity: 0;
-    left: 90%;
-  }
-  to {
-    opacity: 1;
-    left: 100%;
-  }
-}
-@keyframes fadeInLeft {
-  from {
-    opacity: 0;
-    left: 90%;
-  }
-  to {
-    opacity: 1;
-    left: 100%;
-  }
-}
 .icon {
   display: inline-block;
   vertical-align: middle;
@@ -234,43 +214,43 @@ footer {
 .filter__clear:active {
   background-color: #c2c2c2;
 }
-.cars {
+.cards {
   display: -webkit-flex;
   display: flex;
   -webkit-flex-wrap: wrap;
           flex-wrap: wrap;
   margin: 0 -10px;
 }
-.car {
+.card {
   position: relative;
   width: 33.333%;
   min-width: 260px;
   padding: 0 10px 20px 10px;
 }
-.car__inner {
+.card__inner {
   position: relative;
   top: 0;
   border-radius: 3px;
   box-shadow: 0 1px 5px 0 rgba(0,0,0,0.1);
   transition: top 0.2s, box-shadow 0.2s;
 }
-.car__inner:hover {
+.card__inner:hover {
   top: -3px;
   box-shadow: 0 2px 8px 0 rgba(0,0,0,0.2);
 }
-.car__preview {
+.card__preview {
   display: block;
   position: relative;
   background: #ececec;
   min-height: 160px;
 }
-.car__thumb {
+.card__thumb {
   display: block;
   border-radius: 3px 3px 0 0;
   width: 100%;
   height: auto;
 }
-.car__price {
+.card__price {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -282,16 +262,17 @@ footer {
   color: #fff;
   text-shadow: 0 1px 2px rgba(0,0,0,0.5);
 }
-.car__info {
+.card__info {
   border-radius: 0 0 3px 3px;
   padding: 10px;
+  background: #fff;
 }
-.car__string {
+.card__string {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.car__param {
+.card__param {
   margin-right: 10px;
 }
 .popover {
@@ -416,7 +397,7 @@ footer {
   pointer-events: none;
 }
 @media (max-width: 1020px) {
-  .car {
+  .card {
     width: 50%;
   }
 }
@@ -424,6 +405,12 @@ footer {
   .hide-2,
   .footer__item_last {
     display: none;
+  }
+}
+@media (min-width: 800px) {
+  aside.side_left {
+    display: -webkit-flex !important;
+    display: flex !important;
   }
 }
 @media (max-width: 800px) {
@@ -441,33 +428,19 @@ footer {
   .section .side_left {
     -webkit-flex-basis: initial;
             flex-basis: initial;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+  }
+  aside.side_left {
+    display: none;
   }
   .header__link_filter {
     display: inline-block;
   }
-  .filter__param {
-    height: initial;
-    line-height: initial;
-    display: block;
-    padding: 0;
-  }
   .filter__param:hover .popover {
-    display: block;
-    -webkit-animation: none;
-            animation: none;
-    left: 0px;
+    display: none;
   }
   .filter__text {
     max-width: 85%;
-    margin-right: 20px;
-    line-height: 50px;
-    padding: 0 20px;
-  }
-  .filter__clear {
-    position: absolute;
-    right: 20px;
-    top: 16px;
   }
   .popover {
     position: relative;
@@ -539,19 +512,22 @@ footer {
   .header__link .icon {
     display: block;
   }
+  .section .side_left {
+    margin-bottom: 10px;
+  }
   .side_left_padding {
     padding-left: 10px;
   }
   .side_right {
     padding: 0 10px;
   }
-  .cars {
+  .cards {
     margin: 0 -5px;
   }
-  .car {
+  .card {
     padding: 0 5px 10px 5px;
   }
-  .car__inner:hover {
+  .card__inner:hover {
     top: 0px;
   }
   .pagination {
@@ -562,7 +538,27 @@ footer {
   }
 }
 @media (max-width: 540px) {
-  .car {
+  .card {
     width: 100%;
+  }
+}
+@-webkit-keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    left: 90%;
+  }
+  to {
+    opacity: 1;
+    left: 100%;
+  }
+}
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    left: 90%;
+  }
+  to {
+    opacity: 1;
+    left: 100%;
   }
 }
